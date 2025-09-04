@@ -266,6 +266,7 @@ button:hover {
     padding: 10px;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
+    gap: 20px;
   }
 
   .gastos,
@@ -296,6 +297,7 @@ button:hover {
   .tabla {
     max-height: 200px;
     width: 100%;
+    overflow-x: auto; /* Añadido para scroll horizontal en móviles */
   }
 
   .btn-editar,
@@ -310,6 +312,10 @@ button:hover {
     height: 30px;
     font-size: 0.8rem;
   }
+
+  .progress-bar {
+    width: 100%; /* Ajustado para ocupar todo el ancho en móviles */
+  }
 }
 
 @media (max-width: 480px) {
@@ -321,6 +327,7 @@ button:hover {
     margin-left: 2%;
     margin-right: 2%;
     padding: 5px;
+    gap: 15px;
   }
 
   .gastos,
@@ -345,6 +352,7 @@ button:hover {
 
   .tabla {
     max-height: 150px;
+    overflow-x: auto; /* Añadido para scroll horizontal */
   }
 
   .btn-editar,
@@ -358,5 +366,9 @@ button:hover {
     width: 60%;
     height: 25px;
     font-size: 0.7rem;
+  }
+
+  .progress-bar {
+    width: 100%;
   }
 }
