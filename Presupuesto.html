@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codificación</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <h1>Gasto Semanal</h1>
+    <div class="container">
+      <div class="gastos">
+        <h2>Añade tus gastos aquí</h2>
+        <div class="tex1">
+          <h2>Gasto:</h2>
+          <input
+            type="text"
+            id="gasto1"
+            placeholder="Nombre Gasto"
+            class="sub1"
+          />
+        </div>
+        <div class="tex2">
+          <h2>Cantidad:</h2>
+          <input
+            type="text"
+            id="cantidad1"
+            placeholder="Cantidad en $"
+            class="sub2"
+          />
+        </div>
+        <div class="tex3">
+          <h2>Categoría:</h2>
+          <select id="categoria1" class="sub5">
+            <option value="Alimentación">Alimentación</option>
+            <option value="Transporte">Transporte</option>
+            <option value="Entretenimiento">Entretenimiento</option>
+            <option value="Salud">Salud</option>
+            <option value="Otros">Otros</option>
+          </select>
+          <div
+            id="otra-categoria-container"
+            style="display: none; margin-top: 10px"
+          >
+            <input
+              type="text"
+              id="otra-categoria"
+              placeholder="Especifica otra categoría"
+              class="sub1"
+            />
+          </div>
+        </div>
+        <div class="tex4">
+          <h2>Fecha:</h2>
+          <input type="date" id="fecha1" class="sub6" />
+        </div>
+        <div class="botones-container">
+          <div class="boton-agregar">
+            <button onclick="validar()">
+              <h3>Agregar</h3>
+            </button>
+          </div>
+          <div class="boton-eliminar">
+            <button onclick="eliminarOperacion()">
+              <h3>Eliminar Operación</h3>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="lista">
+        <h2><p>Listado</p></h2>
+        <div class="tabla">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <td>Artículo</td>
+                <td>Categoría</td>
+                <td>Fecha</td>
+                <td>Valor del artículo</td>
+                <td>Opciones</td>
+              </tr>
+            </thead>
+            <tbody id="body"></tbody>
+          </table>
+        </div>
+        <input
+          type="text"
+          id="presupuesto"
+          placeholder="Presupuesto:"
+          class="sub3"
+          readonly
+        />
+        <input
+          type="text"
+          id="restante"
+          placeholder="Restante:"
+          class="sub4"
+          readonly
+        />
+        <div class="progress-container">
+          <h3>Progreso del Presupuesto</h3>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+          <p id="progress-text">0% usado</p>
+        </div>
+      </div>
+    </div>
+    <script src="codif.js"></script>
+  </body>
+</html>

@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+}
+body {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    311deg,
+    rgba(0, 0, 0, 1) 19%,
+    rgba(4, 60, 169, 1) 97%
+  );
+  font-family: Georgia, "Times New Roman", Times, serif;
+  min-height: 100vh;
+  width: 100%;
+  color: white;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+.container {
+  background-color: white;
+  min-height: 700px;
+  height: auto;
+  margin: 0 auto;
+  max-width: 1400px;
+  color: gray;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 30px;
+  text-align: center;
+  border-radius: 25px;
+  padding: 30px;
+  box-sizing: border-box;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+.gastos {
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.tex1,
+.tex2,
+.tex3,
+.tex4 {
+  text-align: left;
+  margin: 0;
+  color: black;
+  font-weight: bold;
+}
+.sub1,
+.sub2,
+.sub5,
+.sub6 {
+  height: 45px;
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  font-size: 16px;
+  padding: 10px;
+  margin: 0;
+  box-sizing: border-box;
+}
+.botones-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.boton-agregar {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.boton-eliminar {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+button {
+  background-color: rgb(41, 118, 235);
+  color: white;
+  height: 50px;
+  width: 150px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+button h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: normal;
+}
+.lista {
+  border-radius: 20px;
+  margin-top: 5%;
+}
+.tabla {
+  max-height: 280px;
+  max-width: 100%;
+  width: 100%;
+  overflow-y: auto;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 6px;
+  margin-top: 20px;
+  transition: max-height 0.3s ease;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+.tabla table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.tabla th,
+.tabla td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+.tabla th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+.sub3,
+.sub4 {
+  height: 45px;
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  font-size: 16px;
+  padding: 10px;
+  background-color: rgb(175, 204, 238);
+  margin-top: 15px;
+  box-sizing: border-box;
+}
+.sub4 {
+  margin-top: 10px;
+}
+.btn-editar {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 3px 6px;
+  cursor: pointer;
+  font-size: 11px;
+  transition: background-color 0.3s ease;
+}
+.btn-eliminar {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 3px 6px;
+  cursor: pointer;
+  font-size: 11px;
+  transition: background-color 0.3s ease;
+}
+.btn-agregar {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 3px 6px;
+  cursor: pointer;
+  font-size: 11px;
+  transition: background-color 0.3s ease;
+}
+.valor-articulo-button {
+  background-color: rgba(0, 119, 255, 0.836);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+.progress-container {
+  margin-top: 5%;
+  text-align: center;
+}
+.progress-bar {
+  width: 90%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background-color: #4caf50;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+button.swal2-confirm.swal2-styled,
+button.swal2-cancel.swal2-styled {
+  width: 100px;
+  margin: 5px;
+  display: block;
+  text-align: center;
+}
+
+/* Hover Effects and Transitions */
+.sub1,
+.sub2,
+.sub5,
+.sub6 {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.sub1:hover,
+.sub2:hover,
+.sub5:hover,
+.sub6:hover {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn-editar:hover {
+  background-color: #45a049;
+}
+.btn-eliminar:hover {
+  background-color: #e0e0e0;
+}
+.valor-articulo-button:hover {
+  background-color: rgba(0, 100, 200, 0.9);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    margin-top: 5%;
+    padding: 10px;
+  }
+
+  h1 {
+    margin-left: 0;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .container {
+    height: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    padding: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .gastos,
+  .lista {
+    margin-top: 5%;
+  }
+
+  .sub1,
+  .sub2,
+  .sub3,
+  .sub4,
+  .sub5,
+  .sub6 {
+    width: 95%;
+    font-size: 1rem;
+  }
+
+  button {
+    width: 95%;
+    height: 50px;
+    font-size: 1rem;
+  }
+
+  button h3 {
+    font-size: 1.2rem;
+  }
+
+  .tabla {
+    max-height: 200px;
+    width: 100%;
+  }
+
+  .btn-editar,
+  .btn-eliminar {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+
+  .valor-articulo-button {
+    width: 50%;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 5px;
+  }
+
+  .gastos,
+  .lista {
+    padding: 5px;
+  }
+
+  .sub1,
+  .sub2,
+  .sub3,
+  .sub4,
+  .sub5,
+  .sub6 {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  button {
+    width: 100%;
+    height: 45px;
+  }
+
+  .tabla {
+    max-height: 150px;
+  }
+
+  .btn-editar,
+  .btn-eliminar {
+    width: 25px;
+    height: 25px;
+    font-size: 0.7rem;
+  }
+
+  .valor-articulo-button {
+    width: 60%;
+    height: 25px;
+    font-size: 0.7rem;
+  }
+}

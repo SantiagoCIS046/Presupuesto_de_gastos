@@ -1,0 +1,14 @@
+- [x] Remover CSS en línea de Presupuesto.html
+- [x] Remover JS embebido de Presupuesto.html
+- [x] Corregir src del script en Presupuesto.html a codif.js
+- [x] Asegurar que style.css esté correctamente enlazado
+- [x] Refactorizar codif.js: corregir formato de moneda, eliminar redundancias
+- [x] Mejorar responsividad: agregar media queries, layouts flexibles
+- [x] Agregar características interactivas: categorías, fecha, barra de progreso, almacenamiento local, efectos hover
+- [x] Agregar input HTML para categoría personalizada cuando se selecciona "Otros"
+- [x] Agregar CSS para el nuevo input
+- [x] Agregar listener de eventos JS para el cambio de select
+- [x] Modificar función registrar para usar categoría personalizada
+- [x] Modificar función editar para manejar categorías personalizadas
+- [x] Modificar función limpiar para resetear input personalizado
+- [x] Agregar validación para input de categoría personalizada
