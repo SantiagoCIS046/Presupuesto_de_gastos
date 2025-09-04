@@ -27,7 +27,8 @@ h1 {
   min-height: 700px;
   height: auto;
   margin: 0 auto;
-  max-width: 1400px;
+  min-width: 280px;
+  max-width: 5000px;
   color: gray;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -318,21 +319,21 @@ button:hover {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 280px) {
   h1 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .container {
-    margin-left: 2%;
-    margin-right: 2%;
-    padding: 5px;
-    gap: 15px;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 3px;
+    gap: 10px;
   }
 
   .gastos,
   .lista {
-    padding: 5px;
+    padding: 3px;
   }
 
   .sub1,
@@ -342,33 +343,157 @@ button:hover {
   .sub5,
   .sub6 {
     width: 100%;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    height: 40px;
   }
 
   button {
     width: 100%;
-    height: 45px;
+    height: 40px;
+  }
+
+  button h3 {
+    font-size: 1rem;
   }
 
   .tabla {
-    max-height: 150px;
+    max-height: 120px;
     overflow-x: auto; /* Añadido para scroll horizontal */
   }
 
   .btn-editar,
   .btn-eliminar {
-    width: 25px;
-    height: 25px;
-    font-size: 0.7rem;
+    width: 20px;
+    height: 20px;
+    font-size: 0.6rem;
   }
 
   .valor-articulo-button {
-    width: 60%;
-    height: 25px;
-    font-size: 0.7rem;
+    width: 70%;
+    height: 20px;
+    font-size: 0.6rem;
   }
 
   .progress-bar {
     width: 100%;
+  }
+}
+
+/* Media query for tablets (768px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    grid-template-columns: 50% 50%;
+    gap: 25px;
+    padding: 25px;
+  }
+
+  .sub1,
+  .sub2,
+  .sub3,
+  .sub4,
+  .sub5,
+  .sub6 {
+    width: 98%;
+    font-size: 1.1rem;
+  }
+
+  button {
+    width: 98%;
+    height: 55px;
+    font-size: 1.1rem;
+  }
+
+  .tabla {
+    max-height: 250px;
+  }
+
+  .progress-bar {
+    width: 95%;
+  }
+}
+
+/* Media query for PC (1024px to 1919px) */
+@media (min-width: 1025px) and (max-width: 1919px) {
+  .container {
+    grid-template-columns: 45% 55%;
+    gap: 30px;
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .sub1,
+  .sub2,
+  .sub3,
+  .sub4,
+  .sub5,
+  .sub6 {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  button {
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .tabla {
+    max-height: 280px;
+  }
+
+  .progress-bar {
+    width: 90%;
+  }
+}
+
+/* Media query for TV (1920px and above) */
+@media (min-width: 1920px) {
+  .container {
+    grid-template-columns: 40% 60%;
+    gap: 40px;
+    padding: 50px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .sub1,
+  .sub2,
+  .sub3,
+  .sub4,
+  .sub5,
+  .sub6 {
+    width: 100%;
+    font-size: 18px;
+    height: 50px;
+  }
+
+  button {
+    width: 180px;
+    height: 60px;
+    font-size: 18px;
+  }
+
+  button h3 {
+    font-size: 20px;
+  }
+
+  .tabla {
+    max-height: 350px;
+  }
+
+  .tabla th,
+  .tabla td {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .progress-bar {
+    width: 95%;
+    height: 25px;
   }
 }
